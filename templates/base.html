@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Car Marketplace{% endblock %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Car Marketplace{% endblock %}</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/cars">View Cars</a>
+        <a href="/cars/register">Register Car</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
