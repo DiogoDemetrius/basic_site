@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Cars</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Marketplace - View Cars</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/cars">View Cars</a>
+    </nav>
+    <div class="container">
+        <h2>Available Cars</h2>
+        <ul>
+            {% for car in cars %}
+                <li><a href="/cars/{{ car.id }}">{{ car.make }} {{ car.model }} - ${{ car.price }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

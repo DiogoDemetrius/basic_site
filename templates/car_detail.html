@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Details</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Marketplace - Car Details</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/cars">View Cars</a>
+    </nav>
+    <div class="container">
+        <h2>{{ car.make }} {{ car.model }}</h2>
+        <p><strong>Year:</strong> {{ car.year }}</p>
+        <p><strong>Price:</strong> ${{ car.price }}</p>
+        <p><strong>Description:</strong> {{ car.description }}</p>
+        <h3>Contact Information</h3>
+        <p><strong>Owner:</strong> {{ car.owner.username }}</p>
+    </div>
+</body>
+</html>
